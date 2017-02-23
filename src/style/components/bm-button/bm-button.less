@@ -1,0 +1,72 @@
+@import "../../core/index";
+.bm-btn {
+  position: relative;
+  display: block;
+  margin: @marginDistance @marginDistance;
+  padding: 0 @paddingDistance;
+  line-height: @heightDefault;
+  border-radius: @sizeRadiusSmall;
+  outline: none;
+  text-align: center;
+  font-size: @fontSizeSmall;
+  box-sizing: border-box;
+  &-primary {
+    background: @colorPrimary;
+    color: @colorTextDefaultInverse;
+    &:active {
+      background: @colorPrimaryAcive;
+      color: rgba(255, 255, 255, .6)
+    }
+    &-disabled {
+      background: @colorPrimaryAcive;
+      color: rgba(255, 255, 255, .6)
+    }
+    &-loading {
+      background: @colorPrimaryAcive;
+      color: rgba(255, 255, 255, .6);
+  }
+  }
+  &-normal {
+    background: #fff;
+    color: @colorTextDefault;
+    &:active {
+      background: @colorBgDisabled;
+    }
+    &-disabled {
+    background: @colorBgDisabled;
+    color: @colorTextDisabled;
+  }
+  }
+    &-warn {
+    background: @colorWarn;
+    color: @colorTextDefaultInverse;
+    &:active {
+      background: @colorWarnActive;
+      color: rgba(255, 255, 255, .6)
+    }
+    &-disabled {
+      background: @colorWarnActive;
+      color: rgba(255, 255, 255, .6)
+    }
+    &-loading {
+      background: @colorWarnActive;
+      color: rgba(255, 255, 255, .6);
+  }
+}
+  &-inline {
+    display:inline-block;
+    &-small {
+      display:inline-block;
+      line-height: @heightDefault/1.5;
+      font-size: @fontSizeLittle;
+    }
+    &-small-inverse {
+      display:inline-block;
+      background: @colorBgDefault;
+      color: @colorPrimary;
+      border: 1px solid @colorPrimary;
+      line-height: @heightDefault/1.5;
+      font-size: @fontSizeLittle;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.bm-check {
+  position: absolute;
+  left: -999rem;
+  &:checked {
+    & + .bm-checked {
+      &:before {
+        font-family: bm-font;
+        display: block;
+        content: "\e645";
+        font-size: @fontSizeSmall;
+        color: @colorPrimary;
+      }
+    }
+    
+  }
+}

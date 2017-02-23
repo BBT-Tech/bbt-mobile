@@ -1,0 +1,47 @@
+@import "../../core/index";
+// list body 所有的 list 都该放在此 class 中
+.bm-list {
+  &-title {
+    padding: @paddingDistance/1.5 @paddingDistance @paddingDistance/3 @paddingDistance;
+    font-size: @fontSizeLittle;
+    color: @colorTextCaption;
+  }
+  &-body {
+  position: relative;
+  display: block;
+  background: @colorBgDefault;
+  &:before {
+    .setTopLine(@colorBorder);
+  }
+  &:after {
+   .setBottomLine(@colorBorder);
+  }
+}
+}
+// 输入框
+.bm-input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  font-size: inherit;
+  color: inherit;
+}
+// label 
+.bm-label-short,
+.bm-label-short{
+  display: block;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.bm-label-short {
+  width: 8.4rem;
+}
+.bm-label-long {
+  flex: 1;
+}
+// 说明
+.bm-list-item-caption {
+  text-align: right;
+  color: @colorTextCaption;
+  font-size: inherit;
+}

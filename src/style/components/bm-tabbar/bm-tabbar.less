@@ -1,0 +1,36 @@
+@import "../../core/index";
+
+.bm-tabbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: @heightDefault;
+  width: 100%;
+  background: @colorBgDefault;
+  line-height: 1.2;
+  border-top: 1px solid @colorBorder;
+  &-item {
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    &-on {
+      color: @colorPrimary;
+    }
+    &-icon {
+      font-size: @fontSizeSmall;
+    }
+    &-title {
+      font-size: @fontSizeLittler;
+    }
+  }
+}
+.bm-tabbar-panel {
+  padding-bottom: @heightDefault;
+  background: @colorBgDefault;
+  height: 100%;
+}

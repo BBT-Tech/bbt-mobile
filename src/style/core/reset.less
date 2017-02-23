@@ -1,0 +1,35 @@
+@import "./index";
+*,
+*:before,
+*:after {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  // 设备纵向 横向字体大小调节
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+html {
+  font-size: 62.5%; // 10px;
+}
+body {
+  line-height: 1.6;
+  font-family: @fontDefault;
+  background: @colorBgPage;
+}
+
+a {
+  text-decoration: none;
+  background: transparent;
+  outline: none;
+}
