@@ -1,0 +1,47 @@
+@import "../../core/index";
+.bm-panel {
+  position: relative;
+
+  background: @colorBgDefault;
+  &:before {
+    .setTopLine(@colorBorder);
+  }
+  &:after {
+    .setBottomLine(@colorBorder);
+  }
+}
+
+.bm-media-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem @paddingDistance;
+  &-left {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    &-title {
+      font-size: @fontSizeSmall;
+      color: @colorTextDefault;
+    }
+    &-meta {
+      font-size: @fontSizeLittle;
+      color: @colorTextCaption;
+      &-time {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAABOklEQVQ4T52S4VHCUBCEd7UA6QCsQOggJWAHsQJzaUBsIIcdYAWmhNBBrEA7AApg1rn3yADK8MP3J8nlvru920f88zA4uU8BvgCYAHoCsIVux6km958pLqxAfgF6pVmfwca3OQklwGcABaRdjvEOQAvo/QBvaNU95T6C8A2iAuiQ1vn95ORuD4AMwpK1jQapJZSSO9aWILkvUkOz9FTjbe6uN5q1AzjPMjChWZL9Bwxl4AbQ7DhjVBcK1lYMAjPIMXSzAve7SFbjHYguVAwdA5ywtvIEDPnDdx8jXALTNmnV7JqtajyWuKDZaugYPvVhRwx+CZb72R4SeFxGeKhHmnVnbrgXAD8O5i+z5QPYeATKo+HsDyWnAObpQhBVyPwNtqE/XbcoIOQNE9E9kuOiLFjb/Ay8tpRL/34AQJShD8D9fWQAAAAASUVORK5CYII=");
+        background-repeat: no-repeat;
+        padding-left: 16px;
+        color: #FF8F90;
+      }
+    }
+  }
+  &-right {
+    // width: 8em;
+    // height: 8em;
+  }
+  &:after {
+    .setBottomLine(@colorBorder);
+    left: @marginDistance;
+  }
+}
+

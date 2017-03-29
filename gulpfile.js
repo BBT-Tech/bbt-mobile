@@ -30,6 +30,7 @@ gulp.task('less', function() {
 		path.basename += '.min';
 	}))
 	.pipe(gulp.dest('./dist/style/'))
+	.pipe(gulp.dest('../../style/'))
 
 });
 // gulp.task('js', function() {
@@ -50,7 +51,7 @@ gulp.task('watch', function() {
 gulp.task('server', function () {
 	browserSync.init({
 		server: {
-			baseDir: './dist/'
+			baseDir: '../../../miyun/'
 		},
 		startPath: '/'
 	});
