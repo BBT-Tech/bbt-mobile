@@ -1,7 +1,6 @@
 @import "../../core/index";
 .bm-panel {
   position: relative;
-
   background: @colorBgDefault;
   &:before {
     .setTopLine(@colorBorder);
@@ -11,6 +10,7 @@
   }
 }
 
+// @media-box 左右布局
 .bm-media-box {
   position: relative;
   display: flex;
@@ -45,3 +45,18 @@
   }
 }
 
+// mediabox-intro
+.bm-media-box-intro {
+  position: relative;
+  padding: @marginDistance;
+  font-size: @fontSizeLittle;
+  color: @colorTextCaption;
+  background: @colorBgDefault;
+  text-align: justify;
+  &:before {
+    .setTopLine(@colorBorder);
+  }
+  &:after {
+    .setBottomLine(@colorBorder);
+  }
+}
