@@ -1,49 +1,63 @@
 @import "../../core/index";
-.bm-navbar{
+.bm-navbar {
   display: flex;
-  align-items: center;
-  padding: 0 @paddingDistance;
-  height: @heightDefault;
-  background: @colorBgDefault;
-  font-size: @fontSizeSmaller;
-  &-left,
-  &-middle,
-  &-right {
+  width: 100%;
+  height: 4.8rem;
+  z-index: 998;
+  &-item {
+    position: relative;
+    align-items: center;
+    justify-content: center;
     display: flex;
     flex: 1;
-    align-items: center;
-    height: 100%;
-  }
-  &-left{
-    color: @colorPrimary;
-    justify-content: flex-start;
-  }
-  &-middle {
-    justify-content: center;
-  }
-  &-right {
-    color: @colorPrimary;
-    justify-content: flex-end;
+    color: @textDefalutColor;
+    background: @navBarDefaultBgColor;
+    font-size: @fontSizeSmaller;
+    &-on {
+      color: @textActiveColor;
+      background: @navBarActiveBgColor;
+    }
+    &:active {
+      color: @textActiveColor;
+      background: @navBarActiveBgColor;
+    }
+    &:after {
+      .setRightLine(#fff);
+    }
+    &:last-child {
+      border-right: none;
+    }
   }
 }
 
-// .bm-navbar{
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   padding: 0 1.6rem;
-//   height: 4.8rem;
-//   font-size: 1.6rem;
-//   .bm-navbar-left {
-//     flex: 1;
-//     // align-self: flex-start;
-//   }
-//   .bm-navbar-middle {
-//     flex:1;
-//     // align-self: center;
-//   }
-//   .bm-navbar-right {
-//     flex: 1;
-//     justify-content: flex-end
-//   }
-// }
+// 在顶部的nav
+.nav-bar-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+// 在底部的nav
+.nav-bar-bottom {
+  position: fixed;
+  bottom: 0;
+}
+
+.nav-bar-item-active {
+  color: @textActiveColor;
+  background: @navBarActiveBgColor;
+}
+
+// tab bd
+.tab-bd {
+  box-sizing: border-box;
+  height: 100%;
+  .tab-bd-item {
+    display: none;
+    height: 100%;
+    overflow: auto;
+    &.tab-bd-item-active {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.bm-feed-item {
+  position: relative;
+  display: flex;
+  padding: 1rem @paddingDistance;
+  justify-content: space-between;
+  &-left {
+    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+  }
+  &-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: @fontSizeSmall;
+    color: #ff8f8f;
+    text-align: center;
+  }
+  &:before {
+    .setTopLine(@colorBorder);
+  }
+  &:after {
+    .setBottomLine(@colorBorder);
+  }
+}
+
+// h1
+.breast-title {
+      font-weight: 400;
+    font-size: 20px;
+    color: #959494;
+    padding: 5px 10px;
+    border-bottom: 1px solid #cecdcc;
+}

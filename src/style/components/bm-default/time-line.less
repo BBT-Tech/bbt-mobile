@@ -1,0 +1,75 @@
+@timeColor:#cecdcc;
+@fontTitleSize:18px;
+.time-line{
+	padding-left: 15px;
+	position: relative;
+	// 时间线的圆圈
+	.time-line-circle{
+		position: absolute;
+		top: 35px;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: @timeColor;
+	}
+	//时间线的线
+	.time-line-line{
+		position: absolute;
+		top: 0;
+		left: 19px;
+		width: 2px;
+		height: 105px;
+		background: @timeColor;
+	}
+	//时间线详细内容
+	.time-line-info{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 20px;
+		margin-left: 18px;
+		margin-right: 18px;
+		padding: 15px;
+		border: 1px @timeColor solid;
+		border-radius: 6px;
+		box-sizing: border-box;
+		.time-line-title{
+			flex: 1;
+			font-size: 16px;
+			color: #727271;
+		}
+		.time-line-img{
+			margin-left: 10px;
+			width: 48px;
+			height: 48px;
+			background: #333;
+		}
+	}
+}
+// 时间线中的图片
+// 图片大小
+@length:60px;
+// margin
+@margin:5px;
+.image-list{
+	margin:5px 0 0 18px;
+	display: flex;
+	flex-flow: row wrap;
+	.image-item{
+		width: @length;
+		height: @length + 20px;
+		margin: 0 @margin @margin 0;
+		img {
+			display: block;
+			width: @length;
+			height: @length;
+		}
+		.image-name{
+			height: 20px;
+			line-height: 20px;
+			font-size: 14px;
+			color: #989899;
+			text-align: center;
+		}
+
+	}
+}
