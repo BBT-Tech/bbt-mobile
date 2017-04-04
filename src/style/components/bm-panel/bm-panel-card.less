@@ -1,0 +1,33 @@
+@import "../../core/index";
+.bm-panel-card {
+  position: relative;
+  background: @colorBgDefault;
+  &-item {
+    position: relative;
+    &-title {
+      position: relative;
+      padding:.5rem @marginDistance 0 @marginDistance;
+      font-size: @fontSizeSmaller;
+      color: @colorTextDefault;
+      // &:after {
+      //   .setBottomLine(@colorBorder);
+      //   left: @marginDistance;
+      // }
+    }
+    &-detail {
+      padding:.5rem @marginDistance;
+      font-size: @fontSizeLittle;
+      color: @colorTextCaption;
+    }
+    &:after {
+      .setBottomLine(@colorBorder);
+      left: @marginDistance;
+    }
+  }
+  &:before {
+    .setTopLine(@colorBorder);
+  }
+  &:after {
+    .setBottomLine(@colorBorder);
+  }
+}

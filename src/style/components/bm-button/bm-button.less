@@ -1,7 +1,9 @@
 @import "../../core/index";
 .bm-btn {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   // margin: @marginDistance @marginDistance;
   padding: 0 @paddingDistance;
   line-height: @heightDefault;
@@ -10,6 +12,9 @@
   text-align: center;
   font-size: @fontSizeSmall;
   box-sizing: border-box;
+  .bm-loading {
+    margin-right: 6px;
+  }
   &-primary {
     background: @colorPrimary;
     color: @colorTextDefaultInverse;
@@ -52,6 +57,7 @@
       background: @colorWarnActive;
       color: rgba(255, 255, 255, .6);
   }
+
 }
   &-inline {
     display:inline-block;
