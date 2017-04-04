@@ -1,0 +1,70 @@
+@import "../../core/index";
+// feed 左右布局，左边固定宽度，右边自适应
+.bm-feed {
+  &-body {
+    position: relative;
+    background: #fff;
+    display: block;
+    background: @colorBgDefault;
+    &:before {
+      .setTopLine(@colorBorder);
+    }
+    &:after {
+      .setBottomLine(@colorBorder);
+    }
+  }
+  &-item {
+    position: relative;
+    display: flex;
+    padding: 1rem @paddingDistance;
+    justify-content: space-between;
+    &-left {
+      margin-right: 10px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+    &-right {
+      flex: 1;
+      font-size: @fontSizeSmall;
+      &-title {
+        font-size: @fontSizeSmall;
+        color: @colorTextDefault;
+      }
+      &-detail {
+        display: flex;
+        flex-direction: column;
+        font-size: @fontSizeLittle;
+        color: @colorTextCaption;
+      }
+      &-meta {
+        font-size: @fontSizeLittle;
+        display: flex;
+        justify-content: space-between;
+        color: #FF8F90;
+        .praise-counts {
+          padding-left: 18px;
+          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAA20lEQVQ4T52SbVXDUBBE79QAxQESwEEl4IBKyMYAwUA2KCASggKKgzqhChjOC1/ntAmHdP+8P3vfzM6uOLM0x7nNHukO+1F1VMd982B2Bl+C3hTVSd8k6MxrzKA6rpyd/wU6cw16AT8DPWavOtaTVp1ZweoCXBpusV9Vx9aZW9DTEdQpqhitFjvgB9A9+EYR+z9COyA2P2CZY26e70++xhjDWgpuMI3qWKzYFHVFNMsU29whOkUMv+F4tUHvO8o7WV4jD+UoFHH4BNscgJNdHfElzb6ojXbPvHE+APMwe1wTcKuyAAAAAElFTkSuQmCC");
+          background-repeat: no-repeat;
+          background-position: 0 50%;
+        }
+        .bad-counts {
+          padding-left: 18px;
+          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAxUlEQVQ4T52SbRXCMAxF38MAlTAJOGASmAQcNFUwBQQHIKGOmANwEE72wccOY4z+6Z/e5OWmxJ+Hzpke7Uc+U2Llbx8gJdIL+D1VxA56A7GhSLMUzCDOFMnLQNUahsDUxxoizkZVLWGomaRc1HEQ6R46sB2a615KBkxcgHkHrLZPWRZgtmeS8GbQVAOACEN0ewDaaC7kxbTL6ayOj3USChAR4PXTiqbAAuDl225nls0TzComKcappkFVn3EHtAtvfgbn/u4dWEh2D3YAaj4AAAAASUVORK5CYII=");
+          background-repeat: no-repeat;
+          background-position: 0 50%;
+        }
+        .service-price {
+          padding-left: 18px;
+          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAABI0lEQVQ4T22SaXXCUBCFv0EBDkodRAJ1EAk4KBMFUcAgIQ5KFdQCDto6QAHDmbeEJOT9yXnLXebeCGW5WQP8AS1OC5svYAv3D4QzcAV2ohpfZASe7IKky6uoXtxsD9zioZsdE4mzl07jfAI064FBVEP1ZbnZLtyIaqjPgMHYS6fB/go82RmhF9XbDBgbf9pdQdJIp229eM6YrV7q8MUa1XoJL6zGu2zVzWY20x6xzO5a7fnEbgXOgvGsnkIAjlWluDjEXpZqxUF0uYfNj3Sf39OBR9XSUcw21lCYI73oLEqv6jFWrsVPNkinhxlrFO6b33Qm9/cpsKQ/rAKL3UQmqsOymyQWntdKz8kmYCp8OWeE0+AE+xaRt7W/Zjxz/4//F2F4ABVIpDpH9hbIAAAAAElFTkSuQmCC");
+          background-repeat: no-repeat;
+          background-position: 0 50%;
+        }
+      }
+    }
+    &:after {
+      .setBottomLine(@colorBorder);
+      left: @marginDistance;
+    }
+  }
+}

@@ -61,25 +61,3 @@
   }
 }
 
-// feed 左右布局，左边固定宽度，右边自适应
-.bm-feed-item {
-  position: relative;
-  display: flex;
-  padding: 1rem @paddingDistance;
-  justify-content: space-between;
-  &-left {
-    margin-right: 10px;
-    width: 80px;
-    height: 80px;
-  }
-  &-right {
-    flex: 1;
-    font-size: @fontSizeSmall;
-  }
-  &:before {
-    .setTopLine(@colorBorder);
-  }
-  &:after {
-    .setBottomLine(@colorBorder);
-  }
-}

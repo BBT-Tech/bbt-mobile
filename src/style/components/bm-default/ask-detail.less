@@ -1,0 +1,31 @@
+@import "../../core/index";
+.ask-detail {
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+
+  border-radius: 2px;
+  border: 1px solid @colorBorder;
+  font-size: 16px;
+  color: @colorTextDefault;
+  &-textarea {
+    resize: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: inherit;
+    color: inherit;
+  }
+  &-meta {
+    display: flex;
+    justify-content: flex-end;
+  }
+   &-counter {
+      font-size: inherit;
+      color: #ff9f9f;
+  }
+}
+.ask-header {
+  background: #fff;
+}

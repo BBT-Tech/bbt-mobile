@@ -1,14 +1,5 @@
 .bm-feed-item {
-  position: relative;
-  display: flex;
-  padding: 1rem @paddingDistance;
-  justify-content: space-between;
-  &-left {
-    margin-right: 10px;
-    width: 80px;
-    height: 80px;
-  }
-  &-right {
+  &-right-slogan {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -17,19 +8,33 @@
     color: #ff8f8f;
     text-align: center;
   }
-  &:before {
-    .setTopLine(@colorBorder);
-  }
-  &:after {
-    .setBottomLine(@colorBorder);
-  }
 }
 
 // h1
 .breast-title {
-      font-weight: 400;
-    font-size: 20px;
-    color: #959494;
-    padding: 5px 10px;
-    border-bottom: 1px solid #cecdcc;
+  font-weight: 400;
+  font-size: 20px;
+  color: #959494;
+  padding: 5px 10px;
+  border-bottom: 1px solid #cecdcc;
+}
+
+.miyun-body {
+  padding-bottom: 4.8rem;
+}
+
+.miyun-call {
+  border-left: 1px solid #fff;
+  color: #fff;
+}
+.call-icon {
+  margin-right: 5px;
+  width:18px;
+  height: 18px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA/klEQVQ4T42TYXECUQyEdxUUB0UCDuAUMHUACkoVAA5wAHVQCTgoEpDQKkjnuwnM65uDe/l3d8mXzSZnSYqInaR3SRdJb7Z/eN8SzuJtkXy23bUUkwOAbi9Vwdr2qQUCIAYS97YZazQAfElaFpm/kma2r6PVOcJK0rFIxkSgTeHcAt1es6JZfm9iAmoVne1zi4QekBAK5vnIZoBwF0+jBEzzkG4rbYLcAaliJum7aAkEU/txIoLvbOxq+/PuQakxIvDjUB0XNwGE40IpwXjdPwWFH3SioL7Q2o/LICDlTiRxDzdjB818CCjUIH/zQM3HKCDVMDfeLFIR577hh/sDEkRbU6gb1LoAAAAASUVORK5CYII=");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+.miyun-small-font {
+  font-size: 1.6rem;
 }

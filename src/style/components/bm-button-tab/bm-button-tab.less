@@ -1,0 +1,42 @@
+@import "../../core/index";
+@button-bar-height: 2.8rem;
+.bm-button-tab-area {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.bm-button-tab {
+  display: flex;
+  width: 80%;
+  height: @button-bar-height;
+  &-item {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid @color-primary;
+    box-sizing: border-box;
+    font-size: @fontSizeLittle;
+    color: @color-primary;
+    &-active {
+      background: @color-primary;
+      color: #fff;
+    }
+    &:last-child {
+      border-top-right-radius: @button-bar-height/2;
+      border-bottom-right-radius: @button-bar-height/2;
+    }
+    &:not(:last-child) {
+      border-left: 0;
+    }
+    &:not(:first-child) {
+      border-left: 0;
+    }
+    &:first-child {
+      border-top-left-radius: @button-bar-height/2;
+      border-bottom-left-radius: @button-bar-height/2;
+      border-left: 1px solid @color-primary;
+    }
+  }
+}
