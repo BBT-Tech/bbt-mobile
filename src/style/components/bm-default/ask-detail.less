@@ -1,31 +1,69 @@
 @import "../../core/index";
-.ask-detail {
-  display: block;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 100%;
-
-  border-radius: 2px;
-  border: 1px solid @colorBorder;
-  font-size: 16px;
-  color: @colorTextDefault;
-  &-textarea {
-    resize: none;
-    outline: none;
-    border: none;
-    width: 100%;
-    font-size: inherit;
-    color: inherit;
-  }
-  &-meta {
-    display: flex;
-    justify-content: flex-end;
-  }
-   &-counter {
-      font-size: inherit;
-      color: #ff9f9f;
+.miyun-price {
+  text-align: center;
+  color: #666;
+  font-size: @fontSizeMiddle;
+  &-old {
+    text-decoration: line-through;
   }
 }
-.ask-header {
+
+// doctor 横向列表
+.doctor-list {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 10px 0 10px 16px;
+  height: 60px;
+  list-style: none;
+  overflow-x: scroll;
+  overflow-y: hidden;
   background: #fff;
+  &:before {
+    .setTopLine(@colorBorder);
+  }
+  &:after {
+    .setBottomLine(@colorBorder);
+  }
+  li {
+    label input {
+      position: absolute;
+      left: -999rem;
+      &:checked {
+        & + img {
+          border: 2px solid @colorPrimary;
+        }
+      }
+    }
+    &:last-child {
+      a {
+        margin-right: 16px;
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #999;
+        line-height: 60px;
+        text-align: center;
+        color: #fff;
+      }
+    }
+    img {
+      margin-right: 10px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+  }
+  &-more {
+    padding: 0 16px;
+    display: block;
+    text-align: right;
+    color: #ff8f8f;
+    font-size: @fontSizeSmall;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

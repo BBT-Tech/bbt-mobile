@@ -1,0 +1,187 @@
+// 此文件包含了蜜孕改版后新写的组件
+@import '../../core/index';
+// 新写的header
+.miyun-header {
+  position: relative;
+  display: flex;
+  background: @colorBgDefault;
+  padding: 1rem 0;
+  flex-direction: column; // justify-content: center;
+  align-items: center;
+  a {
+    width: 10rem;
+    display: block;
+  }
+  &-title {
+    text-align: center;
+    font-size: @fontTitleSize;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+  &:before {
+    .setTopLine(@colorBorder);
+  }
+  &:after {
+    .setBottomLine(@colorBorder);
+  }
+}
+
+.bm-list-title {
+  .more {
+    float: right;
+  }
+}
+
+// 新版主页上的 listitem
+.miyun-qa {
+  &-item {
+    margin: 0 1.6rem 1.6rem 1.6rem;
+    padding: 1rem;
+    background: @colorBgDefault;
+    border-radius: 4px;
+    &-time {
+      font-size: @fontSizeLittler;
+      color: @colorTextCaption;
+    }
+    &-question {
+      font-size: @fontSizeLittle;
+      color: #000;
+    }
+    &-answer {
+      padding: .4rem 0;
+      display: flex; // justify-content: center;
+      &-left {
+        width: 6rem;
+        margin-right: 1rem;
+        .doctor-avatar {
+          img {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+          }
+        }
+        p {
+          font-size: @fontSizeLittler;
+          color: @colorTextCaption;
+          text-align: center;
+        }
+      }
+      &-right {
+        display: flex;
+        position: relative;
+        flex: 1; // align-items: center;
+        .listen-answer {
+          position: relative;
+          top: 1.2rem;
+          display: flex;
+          flex: 1;
+          height: 3.6rem;
+          padding: 0 .6rem;
+          justify-content: space-between;
+          align-items: center;
+          box-sizing: border-box;
+          border-radius: 2rem;
+          background: @color-primary;
+          font-size: @fontSizeLittle;
+          color: #fff;
+          &-left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-icon {
+              position: relative;
+              margin-right: 6px;
+              width: 2.4rem;
+              height: 2.4rem;
+              border-radius: 50%;
+              border: 2px solid #fff;
+              box-sizing: border-box;
+              &:after {
+                position: absolute;
+                left: 6px;
+                top: 4px;
+                display: block;
+                content: "";
+                width: 0;
+                height: 0;
+                border-top: .6rem solid transparent;
+                border-left: 1rem solid #fff;
+                border-bottom: .6rem solid transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-meta {
+      display: flex;
+      justify-content: flex-end;
+      color: @colorTextCaption;
+      font-size: @fontSizeLittler;
+      .listened {
+        margin-right: 16px;
+        padding-left: 16px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAA/ElEQVQoU5WSsZGEMAxFJQWQUsKVsCVQwpUACbYzSqCE3cg2CZRACZRAB7clbAiJtKObY9awm5wTz/jrfcnfRvjnwnN9jLETkW89R8QfZr455+a97gCEEK6I+DDGdFrgvf9CxAkRO2PM9GuykyoS0WiMKdOuwzAU27bN1trLAVBhXdfCOXcPISwqElHVNM0SY5yZuVLt7Q5Jx5KISh1Pgb3zG6CjqVOMcQSAKcuy+eNIu7O6AcBVREprbaupMfPdOacGr0snwCgihYi0AKBjVWkQH2P9AyYi0jgPqZ2BRePr+/7CzGOe52Vd14805gPgva8QsdXH010jPf+EJ7FZgw0m9bg/AAAAAElFTkSuQmCC');
+        background-repeat: no-repeat;
+        background-position: 0 30%;
+      }
+      .useful {
+        padding-left: 16px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAmUlEQVQoU7WSURHCMBBEXx1UAhKQUAl1ABKQAApaCZWAhOAACUhAAvM6SSZkMkz7wf1cJtm93WzSsbO6Br4HLsAbmOvzFkHwHRhjf5WkFmEBzsA1KqiUqyZoR7BWVJkK7MN1IhyAE2C/AdoYCvAReAIhEdKhXSt1qRoctJXgkHXQ3wiGYNxZwUvp05S+co+XMep1v/UOPz/LByZ3Gw2rkywYAAAAAElFTkSuQmCC');
+        background-repeat: no-repeat;
+        background-position: 0 30%;
+      }
+    }
+  }
+}
+
+// 主页另外一个组件
+.miyun-list {
+  &-body {
+    margin: 1.6rem;
+    background: @colorBgDefault;
+    border-radius: 4px;
+  }
+  &-item {
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    font-size: @fontSizeLittle;
+    &:active {
+      background: #ddd;
+    }
+    &-title {
+      width: 7rem;
+      color: @colorPrimary;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    &-detail {
+      flex: 1;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      color: @colorTextCaption;
+    }
+    &:after {
+      .setBottomLine(@colorBorder);
+      left: 1rem;
+    }
+    &:last-child:after {
+      border: 0;
+    }
+  }
+}
+
+.more:after {
+  width: 10px;
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-width: 2px 2px 0 0;
+  border-color: #C8C8CD;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}

@@ -87,3 +87,41 @@
     font-size: @fontSizeSmall;
   }
 }
+
+// textarea input
+.bm-list-textarea {
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid @colorBorder;
+  font-size: 16px;
+  color: @colorTextDefault;
+  background: #fff;
+  textarea {
+    resize: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: inherit;
+    color: inherit;
+  }
+  &-meta {
+    display: flex;
+    justify-content: flex-end;
+  }
+   &-counter {
+      font-size: inherit;
+      color: #ff9f9f;
+  }
+}
+.ask {
+  &-title {
+    font-size: @fontSizeMiddler;
+    text-align: center;
+    font-weight: normal;
+    padding: 6px 0;
+  }
+  // background: #fff;
+}
