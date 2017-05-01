@@ -1,0 +1,31 @@
+@import "../../core/index";
+.success-icon
+{
+  position: relative;
+  margin: 80px auto 20px auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: @colorPrimary;
+  &:before {
+    position: absolute;
+    z-index: 999;
+    width: 40px;
+    height: 70px;
+    left:36px;
+    top: 10px;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 0 10px 10px 0;
+    content: " ";
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+.success-info {
+  font-size: @fontSizeSmall;
+  color: #5d5d5d;
+  text-align: center;
+
+}

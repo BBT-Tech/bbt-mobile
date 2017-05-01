@@ -2,10 +2,11 @@
 
 .bm-tab {
   display: flex;
+  width: 100%;
   height: @heightDefault;
-  // background: @colorBgDefault;
+  background: @colorBgDefault;
   font-size: @fontSizeSmaller;
-  
+  z-index: 999;
   &-item {
     display: flex;
     flex: 1 1 0;
@@ -18,5 +19,8 @@
       color: @colorPrimary;
       border-bottom: 2px solid @colorPrimary;
     }
+  }
+  &-panel {
+    padding-top: @heightDefault;
   }
 }

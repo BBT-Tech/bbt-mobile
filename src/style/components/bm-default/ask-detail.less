@@ -14,7 +14,7 @@
   display: flex;
   flex-wrap: nowrap;
   padding: 10px 0 10px 16px;
-  height: 60px;
+  height: 80px;
   list-style: none;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -30,9 +30,13 @@
       position: absolute;
       left: -999rem;
       &:checked {
-        & + img {
+        &+img  {
           border: 2px solid @colorPrimary;
+          &+p {
+            color: @colorPrimary;
+          }
         }
+        
       }
     }
     &:last-child {
@@ -55,13 +59,18 @@
       border-radius: 50%;
       box-sizing: border-box;
     }
+    p {
+      width: 60px;
+      margin-right: 10px;
+      text-align: center;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: @fontSizeLittler;
+    }
   }
   &-more {
-    padding: 0 16px;
-    display: block;
-    text-align: right;
-    color: #ff8f8f;
-    font-size: @fontSizeSmall;
+    font-size: @fontSizeLittle;
   }
   &::-webkit-scrollbar {
     display: none;

@@ -1,6 +1,6 @@
 @import "../../core/index";
-
 .bm-tabbar {
+  position: relative;
   display: flex;
   align-items: center;
   position: fixed;
@@ -10,7 +10,9 @@
   width: 100%;
   background: @colorBgDefault;
   line-height: 1.2;
-  border-top: 1px solid @colorBorder;
+  &:before {
+    .setTopLine();
+  }
   &-item {
     display: flex;
     flex: 1 1 0;
@@ -18,19 +20,24 @@
     align-items: center;
     flex-direction: column;
     height: 100%;
+    fill: @colorTextCaption;
+    color: @colorTextCaption;
     &-on {
+      fill: @colorPrimary;
       color: @colorPrimary;
     }
     &-icon {
+      fill: inherit;
       font-size: @fontSizeSmall;
+      color: inherit;
     }
     &-title {
       font-size: @fontSizeLittler;
     }
   }
 }
+
 .bm-tabbar-panel {
   padding-bottom: @heightDefault;
-  background: @colorBgDefault;
   height: 100%;
 }

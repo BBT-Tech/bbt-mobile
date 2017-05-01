@@ -35,10 +35,15 @@
 // 新版主页上的 listitem
 .miyun-qa {
   &-item {
+    display: block;
+    position: relative;
     margin: 0 1.6rem 1.6rem 1.6rem;
     padding: 1rem;
     background: @colorBgDefault;
     border-radius: 4px;
+    // &:active {
+    //   background: #ddd;
+    // }
     &-time {
       font-size: @fontSizeLittler;
       color: @colorTextCaption;
@@ -48,7 +53,7 @@
       color: #000;
     }
     &-answer {
-      padding: .4rem 0;
+      padding: 1rem 0 0 0;
       display: flex; // justify-content: center;
       &-left {
         width: 6rem;
@@ -70,11 +75,12 @@
         display: flex;
         position: relative;
         flex: 1; // align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
         .listen-answer {
           position: relative;
           top: 1.2rem;
           display: flex;
-          flex: 1;
           height: 3.6rem;
           padding: 0 .6rem;
           justify-content: space-between;
@@ -184,4 +190,218 @@
   border-color: #C8C8CD;
   border-style: solid;
   transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}
+
+// 医生列表组件
+.miyun-character {
+  &-body {
+    position: relative;
+    background: #fff;
+    display: block;
+    background: @colorBgDefault;
+  }
+  &:before {
+    .setTopLine();
+  }
+  &:after {
+    .setBottomLine();
+  }
+  &-item {
+    display: block;
+    position: relative;
+    padding: 1rem 1.6rem;
+    &:after {
+      .setBottomLine();
+      left: 1.6rem;
+    }
+    &-main {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 1rem;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+      }
+      &-detail {
+        margin-right: 1rem;
+        flex: 1;
+        .doctor-name {
+          color: #000;
+          font-size: @fontSizeLittle;
+        }
+        .doctor-detail {
+          color: @colorTextCaption;
+          font-size: @fontSizeLittler;
+        }
+      }
+      a.bm-btn {
+        width: 7rem;
+        height: 4rem;
+        padding: 0;
+        line-height: 4rem;
+      }
+    }
+    &-meta {
+      padding-top: .6rem;
+      text-align: right;
+      color: @colorTextCaption;
+      font-size: @fontSizeLittler;
+      .price {
+        color: @colorPrimary;
+      }
+    }
+  }
+}
+
+// 个人中心组件
+.personal {
+  &-center {
+    margin: 6rem 1.6rem 1rem 1.6rem;
+    position: relative;
+    background: #fff;
+    border-radius: .4rem;
+  }
+  &-main {
+    padding-top: 4rem;
+    padding-bottom: .6rem;
+    text-align: center;
+    p {
+      margin-top: .2rem;
+    }
+  }
+  &-avatar {
+    position: absolute;
+    margin-left: -4rem;
+    top: -4rem;
+    left: 50%;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+  }
+  &-name {
+    font-size: @fontSizeSmall;
+  }
+  &-detail {
+    font-size: @fontSizeLittle;
+    color: @colorTextCaption;
+  }
+  &-meta {
+    padding: 1rem 0;
+    display: flex;
+    &-item {
+      flex: 1;
+      color: @colorTextCaption;
+      font-size: @fontSizeLittle;
+      &:first-child {
+        border-right: 1px solid #f5f5f5;
+      }
+    }
+  }
+  &-intro {
+    margin: 0 1.6rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: .4rem;
+    font-size: @fontSizeLittle;
+    color: @colorTextCaption;
+  }
+}
+
+.miyun-bar-item {
+  &-title {
+    font-size: @fontSizeSmall;
+    color: @colorPrimary;
+  }
+  &-button {
+    background: @colorPrimary;
+    p {
+      color: #fff;
+      font-size: @fontSizeSmall;
+    }
+  }
+}
+
+// 问医生 答 组件
+.free-tag {
+  position: absolute;
+  background: @colorPrimary;
+  padding: .2rem .4rem;
+  color: #fff;
+  top: 0;
+  right: 0;
+  border-top-right-radius: .4rem;
+  border-bottom-left-radius: .4rem;
+}
+
+.miyun-item-answer-right {
+  flex-direction: column;
+  justify-content: space-between;
+  .miyun-qa-item-question {
+    margin-top: .6rem;
+    height: 4rem;
+  }
+}
+
+// miyun
+.miyun-tab {
+  margin-bottom: 1rem;
+  &-top {
+    position: fixed;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.question-time {
+  text-align: right;
+}
+.doctor-skill {
+  padding-top: .4rem;
+  color: @colorTextCaption;
+  font-size: @fontSizeLittle;
+}
+
+// 约医生组件
+.miyun-reserve {
+  margin-top: 1.6rem;
+  padding: 0 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  &-item {
+    flex: 1;
+    background: #fff;
+    border-radius: 4px;
+    padding: 2rem;
+    font-size: @fontSizeSmall;
+    text-align: center;
+    &:first-child {
+      margin-right: 1.6rem;
+    }
+    .title {
+      color: @colorTextCaption;
+    }
+    .price {
+      color: @colorPrimary;
+    }
+  }
+}
+
+// 医生主页
+.my-question {
+
+  padding: .6rem 1.6rem;
+  &-item {
+      margin-bottom: .6rem;
+    padding: .6rem;
+    border-radius: .4rem;
+    background: #fff;
+    p {
+      font-size: @fontSizeLittle;
+      color: @colorTextCaption;
+    }
+  }
 }
