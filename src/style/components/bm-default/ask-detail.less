@@ -10,33 +10,34 @@
 
 // doctor 横向列表
 .doctor-list {
-  position: relative;
+  &-body {
+    position: relative;
+    &:before {
+      .setTopLine(@colorBorder);
+    }
+    &:after {
+      .setBottomLine(@colorBorder); // overflow-y: hidden;
+    }
+  }
   display: flex;
   flex-wrap: nowrap;
   padding: 10px 0 10px 16px;
   height: 80px;
   list-style: none;
+  background: #fff;
   overflow-x: scroll;
   overflow-y: hidden;
-  background: #fff;
-  &:before {
-    .setTopLine(@colorBorder);
-  }
-  &:after {
-    .setBottomLine(@colorBorder);
-  }
   li {
     label input {
       position: absolute;
       left: -999rem;
       &:checked {
-        &+img  {
+        &+img {
           border: 2px solid @colorPrimary;
           &+p {
             color: @colorPrimary;
           }
         }
-        
       }
     }
     &:last-child {
